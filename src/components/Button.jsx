@@ -4,12 +4,15 @@ function Button({
     label,
     color = "primary",
     variant = "solid",
-    onClick
+    onClick,
+    className,
+    ...props
 }) {
     return (
         <button
-            className={`btn-${color} btn-${variant}`}
+            className={`btn-${color} btn-${variant} ${className}`}
             onClick={onClick}
+            {...props}
         >{label}</button>
     )
 }

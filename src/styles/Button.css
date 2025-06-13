@@ -46,3 +46,9 @@ button:focus-visible {
     border-color: #ffea64;
     color: white;
 }
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+    background-color: #a8a8a8;
+    color: #1a1a1a;
+}

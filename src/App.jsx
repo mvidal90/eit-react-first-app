@@ -2,11 +2,13 @@ import './styles/App.css'
 import Text from './components/Text'
 import Button from './components/Button'
 import Counter from './components/Counter'
+import Form from './components/Form'
 
 function App() {
 
   return (
-    <>
+    <div>
+      <Form />
       <div>
         <Text as="h1" text="Hola, soy un H1" />
         <Text as="h2" text="Hola, soy un H2" />
@@ -37,7 +39,7 @@ function App() {
           onClick={() => console.log(`Soy un botón outline secondary`)}/>
       </div>
       <Counter />
-    </>
+    </div>
   )
 }
 
