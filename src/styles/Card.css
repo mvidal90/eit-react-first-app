@@ -1,0 +1,20 @@
+
+.card-container {
+    box-shadow: 0 0 2px 2px #68686880;
+    border-radius: 16px;
+    padding: 16px;
+    background: #eee;
+    color: #111;
+    width: 200px;
+}
+
+.card-container strong{
+    text-align: end;
+    display: block;
+}
+
+.card-container:hover {
+    box-shadow: 0 0 4px 4px #68686880;
+    background: rgb(224, 254, 244);
+    cursor: pointer;
+}
