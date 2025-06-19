@@ -1,0 +1,15 @@
+
+.detail-container {
+    box-shadow: 0 0 2px 2px #68686880;
+    border-radius: 16px;
+    padding: 16px;
+    background: #eee;
+    color: #111;
+    margin-top: 64px;
+    width: 100%;
+}
+
+.detail-container strong{
+    text-align: end;
+    display: block;
+}
