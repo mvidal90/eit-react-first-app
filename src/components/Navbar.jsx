@@ -3,8 +3,8 @@ import Text from './Text'
 
 function Navbar() {
     return (
-        <header className='header-content'>
-            <div className='header-container'>
+        <header className='header__content'>
+            <div className='header__container'>
                 <Text as="h1" text="React router" />
                 <nav>
                     <NavLink to="/products/Almacen">Almacen</NavLink>

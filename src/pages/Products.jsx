@@ -20,7 +20,7 @@ export default function Products() {
     return (
         <>
             <Text as="h2" text="Productos" />
-            <div className="products-grid">
+            <div className="products__grid">
                 {
                     sectionProducts.map(
                         data =>

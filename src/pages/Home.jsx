@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <Text as="h2" text="Home page" />
-            <div className="products-grid">
+            <div className="products__grid">
                 {
                     products.map(
                         data =>

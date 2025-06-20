@@ -1,4 +1,3 @@
-import "../styles/Button.css"
 
 function Button({
     label,
@@ -10,7 +9,7 @@ function Button({
 }) {
     return (
         <button
-            className={`btn-${color} btn-${variant} ${className}`}
+            className={`btn__${color} btn__${variant} ${className}`}
             onClick={onClick}
             {...props}
         >{label}</button>

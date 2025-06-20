@@ -5,8 +5,6 @@ import Text from "../components/Text";
 
 import { products } from "../data/products";
 
-import '../styles/Detail.css';
-
 export default function ProductDetail() {
 
     const { id } = useParams()
@@ -22,7 +20,7 @@ export default function ProductDetail() {
     
     return (
         product ? (
-            <div className='detail-container'>
+            <div className='detail__container'>
                 <div className="d-flex justify-between align-center">
                     <Text as="h2" text={product.name}/>
                     <Text as="strong" text={`$ ${product.amount}`}/>

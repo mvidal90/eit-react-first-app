@@ -1,8 +1,6 @@
 import { useNavigate } from 'react-router'
 import Text from './Text'
 
-import '../styles/Card.css'
-
 function Card({
     id,
     name,
@@ -12,7 +10,7 @@ function Card({
     const navigate = useNavigate();
 
     return (
-        <div role='button' className='card-container' onClick={() => navigate(`/product/detail/${id}`)}>
+        <div role='button' className='card__container' onClick={() => navigate(`/product/detail/${id}`)}>
             <Text as="h3" text={name}/>
             <Text as="span" text={`(${category})`}/>
             <hr />
