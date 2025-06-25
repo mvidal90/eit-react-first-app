@@ -1,12 +1,14 @@
 
-@import "base/reset";
+@use "base/reset";
 
-@import "components/button";
-@import "components/card";
+@use "components/button";
+@use "components/card";
+@use "components/cart";
+@use "components/modal";
 
-@import "layout/layout";
+@use "layout/layout";
 
-@import "pages/detail";
-@import "pages/products";
+@use "pages/detail";
+@use "pages/products";
 
-@import "utils/utils";
+@use "utils/utils";
