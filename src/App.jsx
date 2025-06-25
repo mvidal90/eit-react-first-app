@@ -1,10 +1,13 @@
+import CartProvider from './context/Cartprovider'
 import AppRoutes from './routes/AppRoutes'
 
 import './sass/main.scss'
 
 function App() {
     return (
-        <AppRoutes />
+        <CartProvider>
+            <AppRoutes />
+        </CartProvider>
     )
 }
 

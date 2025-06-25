@@ -1,0 +1,17 @@
+
+.cart__container {
+    position: relative;
+    .cart__badge {
+        border-radius: 100%;
+        background-color: rgb(188, 57, 57);
+        color: white;
+        position: absolute;
+        top: -0.5rem;
+        right: -0.5rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
