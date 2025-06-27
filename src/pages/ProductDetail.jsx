@@ -4,19 +4,26 @@ import Counter from "../components/Counter";
 import Text from "../components/Text";
 
 import { products } from "../data/products";
+import { getProductById } from "../utils/api";
+import Loading from "../components/Loading";
 
 export default function ProductDetail() {
 
     const { id } = useParams()
+    const [loading, setLoading] = useState(false)
     const [product, setProduct] = useState(undefined)
 
     useEffect(() => {
-        setProduct(
-            products.find(
-                prod => prod.id === parseInt(id) 
-            )
-        )
+        setLoading(true)
+        getProductById(id)
+            .then( prod => setProduct(prod))
+            .catch( err => console.error(err) )
+            .finally( () => setLoading(false))
     }, [id])
+
+    if (loading) {
+        return <Loading />
+    }
     
     return (
         product ? (
