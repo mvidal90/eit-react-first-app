@@ -1,4 +1,4 @@
-import CartProvider from './context/Cartprovider'
+import CartProvider from './context/CartProvider'
 import AppRoutes from './routes/AppRoutes'
 
 import './sass/main.scss'
