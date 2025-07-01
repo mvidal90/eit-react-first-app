@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import Counter from "../components/Counter";
 import Text from "../components/Text";
 
-import { products } from "../data/products";
+// import { products } from "../data/products";
 import { getProductById } from "../utils/api";
 import Loading from "../components/Loading";
 
@@ -34,7 +34,7 @@ export default function ProductDetail() {
                 </div>
                 <Text as="span" text={`(${product.category})`}/>
                 <hr />
-                <Counter />
+                <Counter product={product} />
             </div>
         ) : undefined
     )

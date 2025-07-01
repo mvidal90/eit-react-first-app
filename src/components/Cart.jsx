@@ -7,7 +7,7 @@ import Modal from './Modal'
 
 function Cart() {
 
-  const { quantity } = useContext(CartContext)
+  const { totalQuantity } = useContext(CartContext)
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -15,7 +15,7 @@ function Cart() {
       <div className='cart__container' role="button" onClick={() => setShowModal(true)}>
           <FontAwesomeIcon icon={faShoppingCart} size="xl" />
           <div className='cart__badge'>
-              <span>{quantity}</span>
+              <span>{totalQuantity}</span>
           </div>
       </div>
       <Modal showModal={showModal} closeModal={() => setShowModal(false)} />

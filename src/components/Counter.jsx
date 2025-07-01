@@ -4,10 +4,12 @@ import Button from './Button'
 import Text from './Text'
 import CartContext from '../context/CartContext'
 
-function Counter() {
+function Counter({ product }) {
 
-    const [count, setCount] = useState(0)
-    const { decrement, increment } = useContext(CartContext)
+    const { countProducts, decrement, increment } = useContext(CartContext)
+    const [count, setCount] = useState(
+        countProducts.find( obj => obj.product.id === product.id )?.quantity || 0
+    )
 
     return (
         <div className='d-flex justify-center gap-24'>
@@ -17,7 +19,7 @@ function Counter() {
                 variant="outline" 
                 onClick={() => {
                     setCount(count - 1)
-                    decrement()
+                    decrement(product, count - 1)
                 }}
                 disabled={count === 0} />
             <Text as="span" text={count} />
@@ -27,7 +29,7 @@ function Counter() {
                 variant="outline"
                 onClick={() => {
                     setCount(count + 1)
-                    increment()
+                    increment(product, count + 1)
                 }}/>
         </div>
     )
