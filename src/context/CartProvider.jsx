@@ -57,12 +57,15 @@ function CartProvider({children}) {
         (acc, prod) => acc + prod.quantity, 0
     )
 
+    const resetCart = () => setCountProducts([])
+
     return (
         <CartContext.Provider value={{ 
             countProducts, 
             increment,
             decrement,
-            totalQuantity}}>
+            totalQuantity,
+            resetCart}}>
             {children}
         </CartContext.Provider>
     )

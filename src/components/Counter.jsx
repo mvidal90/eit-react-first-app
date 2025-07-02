@@ -1,5 +1,5 @@
 
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Button from './Button'
 import Text from './Text'
 import CartContext from '../context/CartContext'
@@ -10,6 +10,12 @@ function Counter({ product }) {
     const [count, setCount] = useState(
         countProducts.find( obj => obj.product.id === product.id )?.quantity || 0
     )
+
+    useEffect(() => {
+        if (!countProducts.length) {
+            setCount(0)
+        }
+    }, [countProducts])
 
     return (
         <div className='d-flex justify-center gap-24'>
